@@ -1,0 +1,30 @@
+body {
+    font-family: 'EB Garamond', serif;
+    color: #333;
+    line-height: 1.6;
+    padding: 20px;
+    text-align: center;
+    background-color: #f9f9f9; /* Light gray */
+    margin: 0;
+    padding: 150px;
+}
+
+/* Styling for the main heading */
+h1 {
+    font-size: 36px;
+    font-weight: 700; /* Bold */
+   border-bottom: 2px solid #ccc;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+    margin-top: 50px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+/* Styling for paragraph text */
+p {
+    font-size: 18px;
+    font-weight: 400; /* Regular */
+    color: #555; /* Darker gray */
+    font-style: italic;
+}
