@@ -28,3 +28,12 @@ p {
     color: #d9d9d9; /* Tinted white for paragraphs */
     font-style: italic;
 }
+.wrapper {
+   border: 10px solid #C0C0C0; /* Silver border */
+    padding: 20px; /* Space between the border and content */
+    margin: 50px auto; /* Center the wrapper on the page */
+    max-width: 800px; /* Set a maximum width for the content */
+   /*background-color: #FFE4B5;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /*  Adds a subtle shadow */
+  border-radius: 15px;
+}
