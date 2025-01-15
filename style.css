@@ -32,7 +32,7 @@ p {
 .btn-container {
   display: flex;
   flex-direction: column; /* Arrange items vertically */
-  align-items: left; /* Center align the buttons */
+  align-items: flex-start; /* Center align the buttons */
 }
 
 .btn {
