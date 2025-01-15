@@ -1,18 +1,18 @@
 body {
     font-family: 'EB Garamond', serif;
     color: #f0f0f0; /* Tinted white */
-    line-height: 1.6;
+    line-height: 1;
     background-color: #333333; /* Dark gray */
     margin: 0;
-    padding: 150px; /* Ensures consistent spacing */
-    text-align: center;
+    padding: 20px; /* Ensures consistent spacing */
+    text-align: Left;
 }
 
 /* Styling for the main heading */
 h1 {
-    font-size: 36px;
-    font-weight: 700; /* Bold */
-    border-bottom: 2px solid #666666; /* Medium gray for contrast */
+    font-size: 33px;
+    font-weight: 600; /* Bold */
+    border-bottom: 3px solid #666666; /* Medium gray for contrast */
     padding-bottom: 10px;
     margin-bottom: 20px;
     margin-top: 50px;
@@ -28,12 +28,23 @@ p {
     color: #d9d9d9; /* Tinted white for paragraphs */
     font-style: italic;
 }
-.wrapper {
-   border: 10px solid #C0C0C0; /* Silver border */
-    padding: 20px; /* Space between the border and content */
-    margin: 50px auto; /* Center the wrapper on the page */
-    max-width: 800px; /* Set a maximum width for the content */
-   /*background-color: #FFE4B5;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /*  Adds a subtle shadow */
-  border-radius: 15px;
+
+.btn-container {
+  display: flex;
+  flex-direction: column; /* Arrange items vertically */
+  align-items: left; /* Center align the buttons */
+}
+
+.btn {
+  background-color:#333333;  */
+  border: none; /* Remove border */
+  color: white; /* White text */
+  padding: 10px 20px; /* Padding inside the button */
+  text-align: left; /* Center text */
+  text-decoration: none; /* Remove underline */
+  font-size: 16px; /* Text size */
+  margin: 8px 0; /* Space between buttons */
+  cursor: pointer; /* Change cursor on hover */
+  border-radius: 5px; /* Rounded corners */
+  width: 200px; /* Make all buttons the same width */
 }
