@@ -48,3 +48,6 @@ p {
   border-radius: 5px; /* Rounded corners */
   width: 200px; /* Make all buttons the same width */
 }
+body {
+    cursor: url('Mew.gif'), auto; /* Animated cursor */
+}
