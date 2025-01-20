@@ -49,5 +49,5 @@ p {
   width: 200px; /* Make all buttons the same width */
 }
 body {
-    cursor: url('Mew.gif'), auto; /* Animated cursor */
+    cursor: url('Mew.gif'),url('Mew:static.png) auto; /* Animated cursor */
 }
