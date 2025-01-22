@@ -25,7 +25,7 @@ h1 {
 p {
     font-family: 'EB Garamond', serif;
     font-size: 18px;
-    font-weight: 800; /* Regular */
+    font-weight: 600; /* Regular */
     color: #d9d9d9; /* Tinted white for paragraphs */
 }
 
@@ -43,11 +43,13 @@ p {
   text-align: left; /* Center text */
   text-decoration: none; /* Remove underline */
   font-size: 16px; /* Text size */
-  margin: 8px 0; /* Space between buttons */
-  cursor: nw-resize;; /* Change cursor on hover */
+  margin: 20px 0; /* Space between buttons */
   border-radius: 5px; /* Rounded corners */
   width: 200px; /* Make all buttons the same width */
 }
 body {
     cursor: url('Mew.gif'), url('Mew:static.png') auto; /* Animated cursor */
+}
+.btn:hover {
+    background-color: #555555; /* Change background color on hover */
 }
