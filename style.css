@@ -36,6 +36,7 @@ p {
 }
 
 .btn {
+  font-family: 'EB Garamond', serif
   background-color:#333333;  
   border: none; /* Remove border */
   color: white; /* White text */
