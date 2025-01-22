@@ -41,7 +41,7 @@ p {
   border: none; /* Remove border */
   color: white; /* White text */
   padding: 10px 20px; /* Padding inside the button */
-  text-align: left; /* Center text */
+  text-align: center; /* Center text */
   text-decoration: none; /* Remove underline */
   font-size: 16px; /* Text size */
   margin: 20px 0; /* Space between buttons */
