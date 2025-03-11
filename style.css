@@ -1,50 +1,66 @@
 body {
     font-family: 'EB Garamond', serif;
-    color: #f6b7a5; /* peach */
-    line-height: 1;
-    background-color: #333333; /* Dark gray */
+    color: #f6b7a5;
+    background-color: #333333;
     margin: 0;
-    padding: 20px; /* Ensures consistent spacing */
-    text-align: left;
-    cursor: url('Mew.gif'), url('Mew:static.png') auto;
+    padding: 20px;
 }
 
-/* Styling for the main heading */
-h1 {
-    font-size: 33px;
-    font-weight: 600; /* Bold */
-    border-bottom: 3px solid #666666; /* Medium gray for contrast */
-    padding-bottom: 10px;
-    margin-bottom: 20px;
+.wrapper {
+    text-align: center;
     margin-top: 50px;
-    text-transform: uppercase;
-    letter-spacing: 2px;
-    color: #ffffff; /* Pure white for headings */
 }
 
-/* Styling for paragraph text */
-p {
-    font-family: 'EB Garamond', serif;
-    font-size: 18px;
-    font-weight: 600; /* Regular */
-    color: #d9d9d9; /* Tinted white for paragraphs */
+h1 {
+    font-size: 36px;
+    color: #ffffff;
+    border-bottom: 3px solid #f6b7a5;
+    padding-bottom: 10px;
+}
+
+.content {
+    display: flex;
+    justify-content: space-between; /* Push text and image to opposite sides */
+    align-items: flex-start; /* Align them to the top */
+    margin-top: 30px;
+}
+
+.text {
+    flex: 1; /* This takes up half of the screen width */
+    max-width: 50%; /* Limit text to half the screen */
+    padding-right: 20px;
+}
+
+.image {
+    flex: 1; /* This takes up the other half of the screen */
+    max-width: 50%;
+    padding-left: 20px;
+}
+
+img {
+    width: 100%;
+    height: auto;
+    object-fit: cover; /* Ensure image covers its area */
 }
 
 .btn-container {
-  display: flex;
-  flex-direction: column; /* Arrange items vertically */
-  align-items: flex-start; /* Center align the buttons */
+    margin-top: 20px;
+    text-align: center;
 }
 
 .btn {
-  display: inline-block;
+    display: inline-block;
     padding: 10px 20px;
-    background-color: #333333; /* Dark background */
-    color: white; /* White text */
-    text-decoration: none; /* Remove underline */
-    border-radius: 5px; /* Rounded corners */
+    background-color: #333333;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
     margin: 10px 0;
     text-align: center;
     font-family: 'EB Garamond', serif;
-    width: 200px; /* Set button width */
+    width: 200px;
+}
+
+.btn:hover {
+    background-color: #555555;
 }
