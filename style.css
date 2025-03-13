@@ -64,3 +64,13 @@ img {
 .btn:hover {
     background-color: #555555;
 }
+.image-container {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.image-container img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px; /* Optional for rounded corners */
+}
