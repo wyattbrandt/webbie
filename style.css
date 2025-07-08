@@ -74,3 +74,48 @@ img {
     height: auto;
     border-radius: 10px; /* Optional for rounded corners */
 }
+
+#bg-video {
+  position: fixed;
+  top: 0;
+  left: 0;
+  min-width: 100%;
+  min-height: 100%;
+  object-fit: cover;
+  z-index: -1;
+}
+
+body {
+  margin: 0;
+  font-family: 'EB Garamond', serif;
+  color: white;
+  background: black; /* fallback */
+}
+
+.wrapper {
+  position: relative;
+  z-index: 1;
+  text-align: center;
+  padding-top: 20vh;
+}
+
+.btn-container {
+  margin-top: 20px;
+}
+
+.btn {
+  display: inline-block;
+  margin: 0 10px;
+  padding: 10px 20px;
+  color: white;
+  background-color: rgba(0, 0, 0, 0.5);
+  border: 1px solid white;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background-color 0.3s;
+}
+
+.btn:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
