@@ -157,3 +157,21 @@ img {
   cursor: pointer;
 }
 
+/* Backgrounds */
+body.home {
+  background: linear-gradient(to bottom, #1a2b3c, #1e3d4c, #347c78);
+  color: #f6b7a5;
+}
+
+body.work {
+  background-color: #f0e3d0;
+  background-image: url('/images/sand-texture.png'); /* Use your own sand texture */
+  background-size: cover;
+  color: #333; 
+}
+
+body.about {
+  background-color: #2b4d6b;
+  color: #fefefe;
+}
+
