@@ -140,3 +140,20 @@ img {
     opacity: 0.5;
   }
 }
+
+.site-name {
+  font-size: 66px;
+  font-family: 'EB Garamond', serif;
+  text-decoration: none;
+  color: #ffffff;
+  border-bottom: 3px solid #f6b7a5;
+  padding-bottom: 10px;
+  transition: color 0.3s ease;
+  display: inline-block;
+}
+
+.site-name:hover {
+  color: #f6b7a5;
+  cursor: pointer;
+}
+
