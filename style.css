@@ -33,6 +33,8 @@ h1 {
   flex-wrap: wrap;
 }
 
+
+
 .text, .image {
   flex: 1;
   max-width: 50%;
@@ -129,4 +131,32 @@ body.about {
   background-color: #2b4d6b;
   color: #fefefe;
 }
+
+.about-page {
+  background: linear-gradient(to bottom, #0e3d59, #1a4d6e);
+  color: #f0f8ff;
+  padding: 2rem;
+  min-height: 100vh;
+  font-family: 'Helvetica Neue', sans-serif;
+  position: relative;
+}
+
+.about-page::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image: 
+    radial-gradient(rgba(255, 255, 255, 0.02) 1px, transparent 1px),
+    radial-gradient(rgba(255, 255, 255, 0.015) 1px, transparent 1px);
+  background-size: 40px 40px, 80px 80px;
+  opacity: 0.3;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.about-page * {
+  position: relative;
+  z-index: 1;
+}
+
 
