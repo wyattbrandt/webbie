@@ -119,3 +119,29 @@ body {
   background-color: rgba(255, 255, 255, 0.2);
 }
 
+.sun-rays {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 200px;
+  pointer-events: none;
+  background: linear-gradient(
+    to bottom,
+    rgba(255, 255, 200, 0.15) 0%,
+    rgba(255, 255, 200, 0) 100%
+  );
+  animation: raysMove 6s ease-in-out infinite alternate;
+  mix-blend-mode: screen;
+}
+
+@keyframes raysMove {
+  0% {
+    transform: translateY(0) translateX(-10px) rotate(0deg);
+  }
+  100% {
+    transform: translateY(10px) translateX(10px) rotate(0.5deg);
+  }
+}
+
+
