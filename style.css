@@ -159,9 +159,12 @@ img {
 
 /* Backgrounds */
 body.home {
-  background: linear-gradient(to bottom, #1a2b3c, #1e3d4c, #347c78);
+  background: linear-gradient(to bottom, #001d2e, #003344, #004d55);
   color: #f6b7a5;
+  min-height: 100vh;
+  font-family: 'EB Garamond', serif;
 }
+
 
 body.work {
   background-color: #f0e3d0;
