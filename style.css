@@ -1,44 +1,153 @@
-/* Styles */
+
+
+:root {
+  --bg: #c8d5c0;
+  --bg-warm: #c9d8c0;
+  --text: #141414;
+  --muted-text: #34382f;
+  --border: rgba(0, 0, 0, 0.35);
+  --soft-border: rgba(0, 0, 0, 0.18);
+  --accent: #6f7d68;
+}
+
+/* Base */
 body {
   margin: 0;
   padding: 0;
-  font-family: 'EB Garamond', serif; /* Consider upgrading font later */
-  color: #f6b7a5;
-  background: linear-gradient(to bottom, #1a2b3c, #1e3d4c, #347c78); /* oceanic tones */
+  min-height: 100vh;
+  font-family: "Montserrat", "Josefin Sans", "Futura", sans-serif;
+  color: var(--text);
+  background-color: var(--bg);
   overflow-x: hidden;
 }
+
+/* Thin book-cover border */
+body::before {
+  content: "";
+  position: fixed;
+  inset: 18px;
+  border: 1px solid var(--border);
+  pointer-events: none;
+  z-index: 50;
+}
+
+
+body::after {
+  content: "";
+  position: fixed;
+  inset: 0;
+  background-image:
+    radial-gradient(rgba(0, 0, 0, 0.045) 1px, transparent 1px),
+    radial-gradient(rgba(255, 255, 255, 0.035) 1px, transparent 1px);
+  background-size: 3px 3px, 7px 7px;
+  opacity: 0.25;
+  mix-blend-mode: multiply;
+  pointer-events: none;
+  z-index: 40;
+}
+
+/* Main Layout */
 
 .wrapper {
   position: relative;
   z-index: 1;
   text-align: center;
-  padding-top: 20vh;
+  padding: 110px 2rem 4rem;
+  min-height: 100vh;
+  box-sizing: border-box;
 }
 
-/* Typography */
-h1 {
-  font-size: 66px;
-  color: #f6b7a5; /* peach color */
-  border-bottom: 3px solid #f6b7a5;
-  padding-bottom: 10px;
-  margin-bottom: 20px;
+/* Hero / Cover Style */
+.hero {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  min-height: 65vh;
 }
 
-/* Layout */
+/* Statue / artifact logo */
+.statue-logo {
+  width: 250px;
+  max-width: 70vw;
+  height: auto;
+  margin-bottom: 28px;
+  opacity: 0.9;
+  filter: grayscale(100%) contrast(1.08);
+}
+
+/*Typography  */
+
+h1,
+.site-name {
+  font-family: "Montserrat", "Josefin Sans", "Futura", sans-serif;
+  font-size: clamp(44px, 8vw, 82px);
+  font-weight: 300;
+  letter-spacing: 0.14em;
+  line-height: 0.95;
+  text-transform: uppercase;
+  color: var(--text);
+  text-decoration: none;
+  border: none;
+  margin: 0 0 22px;
+  display: inline-block;
+}
+
+.site-name:hover {
+  color: var(--text);
+  cursor: pointer;
+}
+
+h2 {
+  font-size: 24px;
+  font-weight: 300;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  margin: 2rem 0 1rem;
+}
+
+p {
+  font-family: "Montserrat", "Josefin Sans", sans-serif;
+  font-size: 15px;
+  line-height: 1.8;
+  letter-spacing: 0.03em;
+  color: var(--muted-text);
+}
+
+/* Small label text like the top of the book cover */
+.cover-label {
+  font-size: 13px;
+  font-weight: 400;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--text);
+  border: 1px solid var(--soft-border);
+  padding: 3px 12px;
+  margin-bottom: 45px;
+  display: inline-block;
+}
+
+/*Content Layout */
+
 .content {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: flex-start;
-  margin-top: 30px;
+  gap: 3rem;
+  margin-top: 50px;
   flex-wrap: wrap;
 }
 
-
-
-.text, .image {
+.text,
+.image {
   flex: 1;
-  max-width: 50%;
+  max-width: 520px;
   padding: 20px;
+  box-sizing: border-box;
+}
+
+.text {
+  text-align: left;
 }
 
 img {
@@ -50,94 +159,86 @@ img {
 /* Images */
 .image-container {
   text-align: center;
-  margin-top: 20px;
+  margin-top: 30px;
 }
 
 .image-container img {
   max-width: 100%;
   height: auto;
-  border-radius: 10px;
+  border-radius: 0;
+  filter: grayscale(20%) contrast(0.95);
+  border: 1px solid var(--soft-border);
 }
 
-/* Buttons */
+/* Buttons / Navigation */
+
 .btn-container {
-  margin-top: 20px;
+  margin-top: 35px;
   text-align: center;
 }
 
 .btn {
   display: inline-block;
-  padding: 10px 20px;
-  color: white;
-  background-color: rgba(0, 0, 0, 0.4);
-  border: 1px solid white;
-  border-radius: 5px;
-  text-decoration: none;
-  font-family: 'EB Garamond', serif;
-  font-weight: bold;
-  transition: background-color 0.3s;
+  padding: 12px 28px;
   margin: 10px;
-  width: 200px;
+  min-width: 170px;
+
+  background: transparent;
+  border: 1px solid var(--border);
+  border-radius: 0;
+
+  color: var(--text);
+  text-decoration: none;
+  font-family: "Montserrat", "Josefin Sans", sans-serif;
+  font-size: 13px;
+  font-weight: 400;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+
+  transition: background-color 0.2s ease;
 }
 
 .btn:hover {
-  background-color: rgba(255, 255, 255, 0.2);
-}
-
-/* Background Video */
-#bg-video {
-  position: fixed;
-  top: 0;
-  left: 0;
-  min-width: 100%;
-  min-height: 100%;
-  object-fit: cover;
-  z-index: -2;
-}
-
-.site-name {
-  font-size: 66px;
-  font-family: 'EB Garamond', serif;
-  text-decoration: none;
-  color: #ffffff;
-  border-bottom: 3px solid #f6b7a5;
-  padding-bottom: 10px;
-  transition: color 0.3s ease;
-  display: inline-block;
-}
-
-.site-name:hover {
-  color: #f6b7a5;
+  background-color: rgba(0, 0, 0, 0.055);
   cursor: pointer;
 }
 
-/* Backgrounds */
-body.home {
-  background: linear-gradient(to bottom, #001d2e, #003344, #004d55);
-  color: #f6b7a5;
-  min-height: 100vh;
-  font-family: 'EB Garamond', serif;
+/* 
+   Background Video
+   Optional: hidden by default */
+
+#bg-video {
+  display: none;
 }
 
+/* =========================
+   Page Variants
+========================= */
+
+body.home {
+  background-color: var(--bg);
+  color: var(--text);
+  min-height: 100vh;
+  font-family: "Montserrat", "Josefin Sans", "Futura", sans-serif;
+}
 
 body.work {
-  background-color: #f0e3d0;
-  background-image: url('/images/sand-texture.png'); /* Use your own sand texture */
-  background-size: cover;
-  color: #333; 
+  background-color: #d8cbb4;
+  color: var(--text);
 }
 
 body.about {
-  background-color: #2b4d6b;
-  color: #fefefe;
+  background-color: #bfcfc0;
+  color: var(--text);
 }
 
+/* About Page */
 .about-page {
-  background: linear-gradient(to bottom, #0e3d59, #1a4d6e);
-  color: #f0f8ff;
-  padding: 2rem;
+  background-color: #bfcfc0;
+  color: var(--text);
+  padding: 5rem 2rem;
   min-height: 100vh;
-  font-family: 'Helvetica Neue', sans-serif;
+  font-family: "Montserrat", "Josefin Sans", sans-serif;
   position: relative;
 }
 
@@ -145,11 +246,11 @@ body.about {
   content: "";
   position: absolute;
   inset: 0;
-  background-image: 
-    radial-gradient(rgba(255, 255, 255, 0.02) 1px, transparent 1px),
-    radial-gradient(rgba(255, 255, 255, 0.015) 1px, transparent 1px);
-  background-size: 40px 40px, 80px 80px;
-  opacity: 0.3;
+  background-image:
+    radial-gradient(rgba(0, 0, 0, 0.035) 1px, transparent 1px),
+    radial-gradient(rgba(255, 255, 255, 0.04) 1px, transparent 1px);
+  background-size: 4px 4px, 9px 9px;
+  opacity: 0.35;
   pointer-events: none;
   z-index: 0;
 }
@@ -158,12 +259,14 @@ body.about {
   position: relative;
   z-index: 1;
 }
+
+/* Work Page */
 .work-page {
-  background: linear-gradient(to bottom, #f4e2d8, #e8d3b9);
-  color: #3c2f2f;
-  padding: 2rem;
+  background-color: #d8cbb4;
+  color: var(--text);
+  padding: 5rem 2rem;
   min-height: 100vh;
-  font-family: 'Georgia', serif;
+  font-family: "Montserrat", "Josefin Sans", sans-serif;
   position: relative;
 }
 
@@ -172,10 +275,10 @@ body.about {
   position: absolute;
   inset: 0;
   background-image:
-    radial-gradient(rgba(100, 80, 50, 0.03) 1px, transparent 1px),
-    radial-gradient(rgba(160, 130, 100, 0.02) 1px, transparent 1px);
-  background-size: 60px 60px, 100px 100px;
-  opacity: 0.5;
+    radial-gradient(rgba(80, 60, 35, 0.04) 1px, transparent 1px),
+    radial-gradient(rgba(255, 255, 255, 0.035) 1px, transparent 1px);
+  background-size: 4px 4px, 10px 10px;
+  opacity: 0.4;
   pointer-events: none;
   z-index: 0;
 }
@@ -185,4 +288,38 @@ body.about {
   z-index: 1;
 }
 
+/*Responsive */
 
+@media (max-width: 768px) {
+  body::before {
+    inset: 10px;
+  }
+
+  .wrapper {
+    padding-top: 80px;
+  }
+
+  .statue-logo {
+    width: 190px;
+  }
+
+  h1,
+  .site-name {
+    font-size: 46px;
+    letter-spacing: 0.1em;
+  }
+
+  .content {
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+
+  .text,
+  .image {
+    max-width: 100%;
+  }
+
+  .text {
+    text-align: center;
+  }
+}
