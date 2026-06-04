@@ -368,7 +368,7 @@ body.about {
 .lock-button {
   display: block;          
   margin: 30px auto 0;     
-  width: 120px;             
+  width: 360px;             
   height: auto;
   cursor: pointer;
   transition: transform 0.3s ease, filter 0.3s ease;
