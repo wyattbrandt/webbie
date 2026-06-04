@@ -7,18 +7,35 @@
   <link rel="stylesheet" href="style.css">
   <link rel="icon" href="assets/icons/favicon.ico" type="image/x-icon">
 </head>
- <body class="home">
+<body class="home">
 
   <div class="sun-rays"></div>
 
-  <div class="wrapper">
-    <h1>Wyatt Brandt</h1>
+  <img
+    src="assets/images/LOCK-01.svg"
+    alt="Open navigation menu"
+    class="lock-button"
+    id="lockButton"
+  />
 
-    <div class="btn-container">
-      <a href="about.html" class="btn">About</a>
-      <a href="work.html" class="btn">Work</a>
-    </div>
-  </div>
+  <nav class="sidebar" id="sidebar">
+    <a href="about.html">About</a>
+    <a href="work.html">Work</a>
+    <a href="art.html">Art</a>
+  </nav>
+
+  <main class="wrapper">
+    <h1>Wyatt Brandt</h1>
+  </main>
+
+  <script>
+    const lockButton = document.getElementById("lockButton");
+    const sidebar = document.getElementById("sidebar");
+
+    lockButton.addEventListener("click", () => {
+      sidebar.classList.toggle("open");
+      lockButton.classList.toggle("active");
+    });
+  </script>
 
 </body>
-</html>
