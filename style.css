@@ -334,8 +334,8 @@ body.about {
   left: 0;
   width: 260px;
   height: 100vh;
-  background: rgba(12, 12, 12, 0.96);
-  border-right: 1px solid rgba(212, 175, 55, 0.35);
+  background: rgba(52, 56, 47, 0.98);
+  border-right: 1px solid rgba(191, 94, 65, 0.35);
   
   z-index: 100; 
 
@@ -354,15 +354,16 @@ body.about {
 }
 
 .sidebar a {
-  color: #d4af37;
+  color: #d9c584;
   text-decoration: none;
   font-size: 2rem;
-  letter-spacing: 0.05em;
+  font-weight: 300;
+  letter-spacing: 0.08em;
   transition: color 0.3s ease, transform 0.3s ease;
 }
 
 .sidebar a:hover {
-  color: white;
+  color: #98d6a7; 
   transform: translateX(8px);
 }
 
